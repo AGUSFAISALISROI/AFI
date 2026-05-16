@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - Liquid Glass</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-mesh">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="blob blob-4"></div>
+    </div>
+
+    <div class="app-container glass-panel">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo"
+                onclick="document.querySelector('.nav-item[data-target=\'weather\']') ? document.querySelector('.nav-item[data-target=\'weather\']').click() : window.location.hash = 'weather'">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+            <nav class="nav-menu">
+                <a href="#home" class="nav-item active" data-target="home"><i class="fa-solid fa-house"></i></a>
+                <a href="#about" class="nav-item" data-target="about"><i class="fa-solid fa-user"></i></a>
+                <a href="#market" class="nav-item" data-target="market"><i class="fa-solid fa-store"></i></a>
+                <a href="#gallery" class="nav-item" data-target="gallery"><i class="fa-solid fa-image"></i></a>
+                <a href="#donation" class="nav-item" data-target="donation"><i
+                        class="fa-solid fa-hand-holding-heart"></i></a>
+                <a href="#weather" class="nav-item" data-target="weather" style="display:none;"><i
+                        class="fa-solid fa-cloud-sun"></i></a>
+            </nav>
+            <div class="sidebar-bottom">
+                <a href="#" class="nav-item theme-toggle" title="Toggle Theme"><i class="fa-solid fa-moon"></i></a>
+                <a href="#" class="nav-item interactive-btn" title="Settings"><i class="fa-solid fa-gear"></i></a>
+                <a href="#" class="nav-item new-btn interactive-btn" title="New"><i class="fa-solid fa-plus"></i></a>
+                <div class="avatar-sm">
+                    <img src="assets/img/avatar_11.jpg" alt="Profile">
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Wrapper -->
+        <main class="main-wrapper">
+            <!-- Header -->
+            <header class="top-header">
+                <div class="mobile-nav-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div class="filters">
+                    <button class="filter-btn active interactive-btn"><i class="fa-solid fa-border-all"></i>
+                        All</button>
+                    <button class="filter-btn" data-filter="gaming"><i class="fa-solid fa-gamepad"></i> Gaming</button>
+                    <button class="filter-btn" data-filter="art"><i class="fa-solid fa-palette"></i> Art</button>
+                    <button class="filter-btn" data-filter="fashion"><i class="fa-solid fa-shirt"></i> Fashion</button>
+                    <button class="filter-btn nav-item-header" data-target="crypto"><i class="fa-brands fa-bitcoin"></i>
+                        Crypto</button>
+                </div>
+                <div class="header-right">
+                    <div class="search-bar glass-input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search...">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <button class="btn-primary interactive-btn"><i class="fa-solid fa-wallet"></i> Connect
+                        Wallet</button>
+                    <div class="lang-selector interactive-btn">
+                        <img src="assets/img/flag_us.png" alt="ENG"> Eng <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Sections -->
+            <div class="content-sections">
+                <!-- HOME SECTION -->
+                <section id="home" class="page-section active">
+                    <div class="dashboard-grid">
+                        <!-- Featured Banner -->
+                        <div class="featured-banner glass-card">
+                            <div class="banner-image">
+                                <img src="assets/img/hero.png" alt="Featured">
+                                <div class="timer glass-pill"><span class="dot"></span> <span id="live-clock">14H : 17M
+                                        : 34S</span></div>
+                            </div>
+                            <div class="banner-content dev-profile">
+                                <p class="date"><i class="fa-solid fa-code"></i> Full-Stack Developer & Designer</p>
+                                <h1 class="gradient-text">AFI</h1>
+
+                                <div class="dev-badges">
+                                    <span class="tag eth"><i class="fa-solid fa-gamepad"></i> Gamer</span>
+                                    <span class="tag ada"><i class="fa-solid fa-pen-nib"></i> UI/UX</span>
+                                    <span class="tag btc"><i class="fa-solid fa-tv"></i> Anime Lover</span>
+                                </div>
+
+                                <p class="desc">Bersemangat menciptakan antarmuka yang indah dan pengalaman digital yang
+                                    interaktif. Memadukan logika pemrograman dengan estetika desain modern.</p>
+
+                                <div class="creator-info"
+                                    style="margin-top: auto; margin-bottom: 0; padding-top: 20px;">
+                                    <img src="assets/img/avatar_11.jpg" alt="Developer">
+                                    <div class="creator-text">
+                                        <span>Developer</span>
+                                        <strong>Agus Faisal Isroi</strong>
+                                    </div>
+                                    <button class="btn-outline interactive-btn" style="margin-left: auto;"><i
+                                            class="fa-brands fa-github"></i> GitHub</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Finance Widget -->
+                        <div class="finance-widget glass-card-dark">
+                            <div class="widget-header">
+                                <h3>Your Finance</h3>
+                                <i class="fa-solid fa-ellipsis"></i>
+                            </div>
+                            <div class="crypto-tags">
+                                <span class="tag eth">ETH</span>
+                                <span class="tag ada">ADA</span>
+                                <span class="tag btc">BTC</span>
+                                <span class="tag add">+Add</span>
+                            </div>
+                            <div class="balance">
+                                <span>Total Balance</span>
+                                <h2>$28 672,10 <span class="growth">+81.2%</span></h2>
+                            </div>
+                            <!-- Simple SVG graph -->
+                            <div class="chart-container">
+                                <svg class="chart" viewBox="0 0 100 30" preserveAspectRatio="none">
+                                    <path d="M0,25 Q15,5 30,20 T60,15 T100,5" fill="none" stroke="#a3e635"
+                                        stroke-width="2" />
+                                    <circle cx="0" cy="25" r="1.5" fill="#a3e635" />
+                                    <circle cx="30" cy="20" r="1.5" fill="#a3e635" />
+                                    <circle cx="60" cy="15" r="1.5" fill="#a3e635" />
+                                    <circle cx="100" cy="5" r="1.5" fill="#a3e635" />
+                                </svg>
+                            </div>
+                            <button class="btn-primary w-100 mt-auto">Top Up Balance <i
+                                    class="fa-solid fa-plus-circle"></i></button>
+                        </div>
+
+                        <!-- Grid Title -->
+                        <div class="grid-header">
+                            <h2>What's New</h2>
+                            <button class="filter-dropdown interactive-btn">Explore <i
+                                    class="fa-solid fa-chevron-down"></i></button>
+                        </div>
+
+                        <!-- Items Grid -->
+                        <div class="items-grid">
+                            <!-- Card 1: My Store -->
+                            <div class="item-card glass-card category-card store"
+                                onclick="document.querySelector('.nav-item[data-target=\'market\']').click()">
+                                <div class="item-img">
+                                    <i class="fa-solid fa-store"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>Market</h4>
+                                    <p class="desc">Kunjungi toko digital untuk melihat koleksi proyek dan karya desain.
+                                    </p>
+                                    <button type="button" class="button store">
+                                        <span class="fold"></span>
+                                        <div class="points_wrapper">
+                                            <i class="point"></i><i class="point"></i><i class="point"></i><i
+                                                class="point"></i><i class="point"></i>
+                                            <i class="point"></i><i class="point"></i><i class="point"></i><i
+                                                class="point"></i><i class="point"></i>
+                                        </div>
+                                        <span class="inner">
+                                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2.5">
+                                                <polyline
+                                                    points="13.18 1.37 13.18 9.64 21.45 9.64 10.82 22.63 10.82 14.36 2.55 14.36 13.18 1.37">
+                                                </polyline>
+                                            </svg>
+                                            Buka Toko
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 2: Gaming -->
+                            <div class="item-card glass-card category-card gaming"
+                                onclick="document.querySelector('.filter-btn[data-filter=\'gaming\']').click()">
+                                <div class="item-img">
+                                    <i class="fa-solid fa-gamepad"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>Gaming</h4>
+                                    <p class="desc">Eksplorasi dunia gaming, antarmuka interaktif, dan portofolio
+                                        desain.</p>
+                                    <button type="button" class="button gaming">
+                                        <span class="fold"></span>
+                                        <div class="points_wrapper">
+                                            <i class="point"></i><i class="point"></i><i class="point"></i><i
+                                                class="point"></i><i class="point"></i>
+                                            <i class="point"></i><i class="point"></i><i class="point"></i><i
+                                                class="point"></i><i class="point"></i>
+                                        </div>
+                                        <span class="inner">
+                                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2.5">
+                                                <polyline
+                                                    points="13.18 1.37 13.18 9.64 21.45 9.64 10.82 22.63 10.82 14.36 2.55 14.36 13.18 1.37">
+                                                </polyline>
+                                            </svg>
+                                            Eksplorasi
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Card 3: Crypto -->
+                            <div class="item-card glass-card category-card crypto"
+                                onclick="document.querySelector('.nav-item-header[data-target=\'crypto\']').click()">
+                                <div class="item-img">
+                                    <i class="fa-brands fa-bitcoin"></i>
+                                </div>
+                                <div class="item-info">
+                                    <h4>Crypto Market</h4>
+                                    <p class="desc">Pantau fluktuasi pasar, aset kripto, reksadana, dan saham secara
+                                        live.</p>
+                                    <button type="button" class="button crypto">
+                                        <span class="fold"></span>
+                                        <div class="points_wrapper">
+                                            <i class="point"></i><i class="point"></i><i class="point"></i><i
+                                                class="point"></i><i class="point"></i>
+                                            <i class="point"></i><i class="point"></i><i class="point"></i><i
+                                                class="point"></i><i class="point"></i>
+                                        </div>
+                                        <span class="inner">
+                                            <svg class="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg" stroke-linecap="round"
+                                                stroke-linejoin="round" stroke-width="2.5">
+                                                <polyline
+                                                    points="13.18 1.37 13.18 9.64 21.45 9.64 10.82 22.63 10.82 14.36 2.55 14.36 13.18 1.37">
+                                                </polyline>
+                                            </svg>
+                                            Lihat Market
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Featured Creators & History -->
+                        <div class="sidebar-widgets">
+                            <div class="widget">
+                                <div class="widget-header">
+                                    <h3>Featured Creators</h3>
+                                    <a href="#">See All <i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+                                <div class="creator-featured">
+                                    <img src="assets/img/avatar_47.jpg" alt="Creator">
+                                    <div class="creator-text">
+                                        <span>Creator</span>
+                                        <strong>Jane Cooper</strong>
+                                    </div>
+                                    <button class="btn-follow">+ Follow</button>
+                                </div>
+                                <div class="mini-cards">
+                                    <div class="mini-card glass-card">
+                                        <img src="assets/img/nft_1.jpg" alt="NFT">
+                                        <div class="mc-info">
+                                            <h5>New Figures</h5>
+                                            <span class="eth-price"><i class="fa-brands fa-ethereum"></i> 1.44
+                                                ETH</span>
+                                        </div>
+                                    </div>
+                                    <div class="mini-card glass-card">
+                                        <img src="assets/img/nft_2.jpg" alt="NFT">
+                                        <div class="mc-info">
+                                            <h5>Graceful Lion</h5>
+                                            <span class="eth-price"><i class="fa-brands fa-ethereum"></i> 0.62
+                                                ETH</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget mt-20">
+                                <div class="widget-header">
+                                    <h3>History</h3>
+                                    <a href="#">See All <i class="fa-solid fa-chevron-right"></i></a>
+                                </div>
+                                <div class="history-list">
+                                    <div class="history-item">
+                                        <img src="assets/img/avatar_12.jpg" alt="User">
+                                        <div class="hi-text">
+                                            <strong>Crypto Dragon</strong>
+                                            <span>Creator: Jenny Wilson</span>
+                                        </div>
+                                        <div class="price-time">
+                                            <strong>1.27 ETH</strong>
+                                            <span>2m ago</span>
+                                        </div>
+                                    </div>
+                                    <div class="history-item">
+                                        <img src="assets/img/avatar_33.jpg" alt="User">
+                                        <div class="hi-text">
+                                            <strong>Crypto Dragon</strong>
+                                            <span>Creator: Floyd Miles</span>
+                                        </div>
+                                        <div class="price-time">
+                                            <strong>3.13 ETH</strong>
+                                            <span>5m ago</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ABOUT SECTION -->
+                <section id="about" class="page-section">
+                    <div class="page-header">
+                        <h1>About the Developer</h1>
+                    </div>
+                    <div class="about-content glass-card p-40">
+                        <div class="profile-header">
+                            <img src="assets/img/avatar_11_large.jpg" alt="Profile Large" class="profile-lg">
+                            <div class="profile-info">
+                                <h2>Hi, I'm a Web Developer</h2>
+                                <p class="title">Full Stack Developer & UI/UX Designer</p>
+                                <p class="bio">Passionate about creating stunning, performant, and accessible web
+                                    experiences. Specializing in modern web technologies and glassmorphism design.</p>
+                                <div class="skills">
+                                    <span class="tag glass-pill">HTML/CSS</span>
+                                    <span class="tag glass-pill">JavaScript</span>
+                                    <span class="tag glass-pill">React</span>
+                                    <span class="tag glass-pill">Node.js</span>
+                                    <span class="tag glass-pill">UI/UX</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- MARKET SECTION -->
+                <section id="market" class="page-section">
+                    <div class="page-header">
+                        <h1>Developer Market</h1>
+                        <p>Templates, assets, and services available for purchase.</p>
+                    </div>
+                    <div class="items-grid">
+                        <div class="item-card glass-card">
+                            <div class="item-img">
+                                <img src="assets/img/market_1.png" alt="Template">
+                            </div>
+                            <div class="item-info">
+                                <h4>Liquid Glass Template</h4>
+                                <div class="price">
+                                    <span>Price: <strong>$49.00</strong></span>
+                                </div>
+                                <div class="item-actions">
+                                    <button class="btn-primary-sm w-100">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item-card glass-card">
+                            <div class="item-img">
+                                <img src="assets/img/market_1.png" alt="Service">
+                            </div>
+                            <div class="item-info">
+                                <h4>Custom Web Development</h4>
+                                <div class="price">
+                                    <span>Starting at: <strong>$500.00</strong></span>
+                                </div>
+                                <div class="item-actions">
+                                    <button class="btn-primary-sm w-100">Contact</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- GALLERY SECTION -->
+                <section id="gallery" class="page-section">
+                    <div class="page-header">
+                        <h1>Gallery</h1>
+                        <p>A collection of my recent works and explorations.</p>
+                    </div>
+                    <div class="gallery-masonry">
+                        <div class="gallery-item glass-card"><img src="assets/img/gallery_1.png" alt="Gal"></div>
+                        <div class="gallery-item glass-card"><img src="assets/img/hero.png" alt="Gal"></div>
+                        <div class="gallery-item glass-card"><img src="assets/img/gallery_2.png" alt="Gal"></div>
+                        <div class="gallery-item glass-card"><img src="assets/img/market_1.png" alt="Gal"></div>
+                        <div class="gallery-item glass-card"><img src="assets/img/gallery_1.png" alt="Gal"></div>
+                        <div class="gallery-item glass-card"><img src="assets/img/gallery_2.png" alt="Gal"></div>
+                    </div>
+                </section>
+
+                <!-- DONATION SECTION -->
+                <section id="donation" class="page-section">
+                    <div class="page-header">
+                        <h1>Support My Work</h1>
+                        <p>If you find my content or templates helpful, consider buying me a coffee!</p>
+                    </div>
+                    <div class="donation-container glass-card p-40 flex-col-center">
+                        <div class="coffee-icon">
+                            <i class="fa-solid fa-mug-hot"></i>
+                        </div>
+                        <h2>Buy me a coffee</h2>
+                        <div class="donation-options mt-20">
+                            <button class="glass-pill active">$5</button>
+                            <button class="glass-pill">$10</button>
+                            <button class="glass-pill">$20</button>
+                            <button class="glass-pill">Custom</button>
+                        </div>
+                        <input type="text" class="glass-input mt-20 w-100 max-w-400"
+                            placeholder="Leave a message (optional)">
+                        <button class="btn-yellow mt-20 w-100 max-w-400 interactive-btn">Donate Now <i
+                                class="fa-solid fa-heart"></i></button>
+                    </div>
+                </section>
+                <!-- CRYPTO SECTION -->
+                <section id="crypto" class="page-section">
+                    <div class="page-header">
+                        <h1>Market & Assets Dashboard <span class="live-pulse"></span><small style="color: var(--text-light); font-size: 0.8rem; font-weight: 400; margin-left: 5px;">Live Updates</small></h1>
+                        <p>Professional real-time insights across major global asset classes.</p>
+                    </div>
+
+                    <!-- Featured Assets (Restored All) -->
+                    <div class="items-grid market-grid">
+                        <!-- Bitcoin -->
+                        <div class="market-card glass-card-dark live-asset">
+                            <div class="mc-header">
+                                <div class="mc-title"><i class="fa-brands fa-bitcoin" style="color: #f7931a;"></i>
+                                    Bitcoin/IDR</div>
+                                <i class="fa-solid fa-arrow-trend-up" style="color: #4ade80;"></i>
+                            </div>
+                            <div class="mc-stats">
+                                <div class="mc-price">Rp 1.025.240.000</div>
+                                <div class="mc-change growth">+1.25%</div>
+                            </div>
+                            <div class="card-chart-container">
+                                <svg width="100%" height="100%" viewBox="0 0 200 40">
+                                    <path class="moving-path" d="M0,35 Q20,10 40,25 T80,15 T120,30 T160,10 T200,20" fill="none" stroke="#4ade80" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Ethereum -->
+                        <div class="market-card glass-card-dark live-asset">
+                            <div class="mc-header">
+                                <div class="mc-title"><i class="fa-brands fa-ethereum" style="color: #627eea;"></i>
+                                    Ethereum/IDR</div>
+                                <i class="fa-solid fa-arrow-trend-up" style="color: #4ade80;"></i>
+                            </div>
+                            <div class="mc-stats">
+                                <div class="mc-price">Rp 58.120.000</div>
+                                <div class="mc-change growth">+2.40%</div>
+                            </div>
+                            <div class="card-chart-container">
+                                <svg width="100%" height="100%" viewBox="0 0 200 40">
+                                    <path class="moving-path" d="M0,30 Q30,5 60,25 T120,15 T180,35 T200,10" fill="none" stroke="#4ade80" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Emas -->
+                        <div class="market-card glass-card-dark live-asset">
+                            <div class="mc-header">
+                                <div class="mc-title"><i class="fa-solid fa-coins" style="color: #fbbf24;"></i> Emas/IDR
+                                </div>
+                                <i class="fa-solid fa-arrow-trend-down" style="color: #ef4444;"></i>
+                            </div>
+                            <div class="mc-stats">
+                                <div class="mc-price">Rp 1.250.000</div>
+                                <div class="mc-change fall">-0.45%</div>
+                            </div>
+                            <div class="card-chart-container">
+                                <svg width="100%" height="100%" viewBox="0 0 200 40">
+                                    <path class="moving-path" d="M0,10 Q40,35 80,15 T120,25 T160,5 T200,30" fill="none" stroke="#ef4444" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Perak -->
+                        <div class="market-card glass-card-dark live-asset">
+                            <div class="mc-header">
+                                <div class="mc-title"><i class="fa-solid fa-ring" style="color: #e2e8f0;"></i> Perak/IDR
+                                </div>
+                                <i class="fa-solid fa-arrow-trend-up" style="color: #4ade80;"></i>
+                            </div>
+                            <div class="mc-stats">
+                                <div class="mc-price">Rp 15.000</div>
+                                <div class="mc-change growth">+0.12%</div>
+                            </div>
+                            <div class="card-chart-container">
+                                <svg width="100%" height="100%" viewBox="0 0 200 40">
+                                    <path class="moving-path" d="M0,25 L40,15 L80,20 L120,10 L160,18 L200,5" fill="none" stroke="#4ade80" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- USD/IDR -->
+                        <div class="market-card glass-card-dark live-asset">
+                            <div class="mc-header">
+                                <div class="mc-title"><i class="fa-solid fa-money-bill-wave"
+                                        style="color: #22c55e;"></i> USD/IDR</div>
+                                <i class="fa-solid fa-arrow-trend-down" style="color: #ef4444;"></i>
+                            </div>
+                            <div class="mc-stats">
+                                <div class="mc-price">Rp 16.250</div>
+                                <div class="mc-change fall">-0.05%</div>
+                            </div>
+                            <div class="card-chart-container">
+                                <svg width="100%" height="100%" viewBox="0 0 200 40">
+                                    <path class="moving-path" d="M0,15 Q50,40 100,20 T200,25" fill="none" stroke="#ef4444" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Growdana -->
+                        <div class="market-card glass-card-dark live-asset">
+                            <div class="mc-header">
+                                <div class="mc-title"><i class="fa-solid fa-chart-pie" style="color: #a855f7;"></i>
+                                    Growdana Opt</div>
+                                <i class="fa-solid fa-arrow-trend-up" style="color: #4ade80;"></i>
+                            </div>
+                            <div class="mc-stats">
+                                <div class="mc-price">Rp 1.450</div>
+                                <div class="mc-change growth">+0.02%</div>
+                            </div>
+                            <div class="card-chart-container">
+                                <svg width="100%" height="100%" viewBox="0 0 200 40">
+                                    <path class="moving-path" d="M0,35 L200,5" fill="none" stroke="#4ade80" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Majoris -->
+                        <div class="market-card glass-card-dark live-asset">
+                            <div class="mc-header">
+                                <div class="mc-title"><i class="fa-solid fa-chart-line" style="color: #14b8a6;"></i>
+                                    Majoris PU Syariah</div>
+                                <i class="fa-solid fa-arrow-trend-up" style="color: #4ade80;"></i>
+                            </div>
+                            <div class="mc-stats">
+                                <div class="mc-price">Rp 1.280</div>
+                                <div class="mc-change growth">+0.03%</div>
+                            </div>
+                        </div>
+                        <!-- BBCA -->
+                        <div class="market-card glass-card-dark live-asset">
+                            <div class="mc-header">
+                                <div class="mc-title"><i class="fa-solid fa-building" style="color: #3b82f6;"></i> BBCA
+                                </div>
+                                <i class="fa-solid fa-arrow-trend-down" style="color: #ef4444;"></i>
+                            </div>
+                            <div class="mc-stats">
+                                <div class="mc-price">Rp 9.800</div>
+                                <div class="mc-change fall">-1.25%</div>
+                            </div>
+                        </div>
+                        <!-- BBRI -->
+                        <div class="market-card glass-card-dark live-asset">
+                            <div class="mc-header">
+                                <div class="mc-title"><i class="fa-solid fa-building" style="color: #0ea5e9;"></i> BBRI
+                                </div>
+                                <i class="fa-solid fa-arrow-trend-up" style="color: #4ade80;"></i>
+                            </div>
+                            <div class="mc-stats">
+                                <div class="mc-price">Rp 4.800</div>
+                                <div class="mc-change growth">+0.85%</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Detailed Market Table -->
+                    <div class="crypto-market-container">
+                        <div class="crypto-table-wrapper">
+                            <table class="crypto-table">
+                                <thead>
+                                    <tr>
+                                        <th>Asset</th>
+                                        <th>Price</th>
+                                        <th>1D %</th>
+                                        <th>1W %</th>
+                                        <th>1M %</th>
+                                        <th>1Y %</th>
+                                        <th>Market Cap</th>
+                                        <th>Last 7 Days</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="asset-cell">
+                                                <div class="asset-icon"><i class="fa-brands fa-bitcoin"
+                                                        style="color: #f7931a;"></i></div>
+                                                <div class="asset-name"><strong>Bitcoin</strong><span>BTC</span></div>
+                                            </div>
+                                        </td>
+                                        <td class="price-cell">Rp 1.025.240.000</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 1.25%</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 5.42%</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 12.1%</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 142.5%</td>
+                                        <td class="price-cell">$1.3T</td>
+                                        <td>
+                                            <div class="sparkline-container">
+                                                <svg class="sparkline-svg up" viewBox="0 0 100 30">
+                                                    <path class="sparkline-path" d="M0,25 Q15,5 30,20 T60,15 T100,5"/>
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="asset-cell">
+                                                <div class="asset-icon"><i class="fa-brands fa-ethereum"
+                                                        style="color: #627eea;"></i></div>
+                                                <div class="asset-name"><strong>Ethereum</strong><span>ETH</span></div>
+                                            </div>
+                                        </td>
+                                        <td class="price-cell">Rp 58.120.000</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 2.40%</td>
+                                        <td class="change-cell down"><i class="fa-solid fa-caret-down"></i> 1.15%</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 8.30%</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 88.2%</td>
+                                        <td class="price-cell">$420B</td>
+                                        <td>
+                                            <div class="sparkline-container">
+                                                <svg class="sparkline-svg up" viewBox="0 0 100 30">
+                                                    <path class="sparkline-path" d="M0,20 Q20,5 40,25 T80,10 T100,15"/>
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="asset-cell">
+                                                <div class="asset-icon"><i class="fa-solid fa-circle-dollar-to-slot"
+                                                        style="color: #26a17b;"></i></div>
+                                                <div class="asset-name"><strong>Tether</strong><span>USDT</span></div>
+                                            </div>
+                                        </td>
+                                        <td class="price-cell">Rp 16.250</td>
+                                        <td class="change-cell down"><i class="fa-solid fa-caret-down"></i> 0.02%</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 0.05%</td>
+                                        <td class="change-cell down"><i class="fa-solid fa-caret-down"></i> 0.12%</td>
+                                        <td class="change-cell down"><i class="fa-solid fa-caret-down"></i> 0.45%</td>
+                                        <td class="price-cell">$110B</td>
+                                        <td>
+                                            <div class="sparkline-container">
+                                                <svg class="sparkline-svg down" viewBox="0 0 100 30">
+                                                    <path class="sparkline-path" d="M0,15 L100,16"/>
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="asset-cell">
+                                                <div class="asset-icon"><i class="fa-solid fa-building-columns"
+                                                        style="color: #f3ba2f;"></i></div>
+                                                <div class="asset-name"><strong>BNB</strong><span>BNB</span></div>
+                                            </div>
+                                        </td>
+                                        <td class="price-cell">Rp 9.450.000</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 0.85%</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 12.4%</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 15.6%</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 94.2%</td>
+                                        <td class="price-cell">$85B</td>
+                                        <td>
+                                            <div class="sparkline-container">
+                                                <svg class="sparkline-svg up" viewBox="0 0 100 30">
+                                                    <path class="sparkline-path" d="M0,28 Q30,5 60,20 T100,10"/>
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="asset-cell">
+                                                <div class="asset-icon"><i class="fa-solid fa-snowflake"
+                                                        style="color: #0033ad;"></i></div>
+                                                <div class="asset-name"><strong>Solana</strong><span>SOL</span></div>
+                                            </div>
+                                        </td>
+                                        <td class="price-cell">Rp 2.450.000</td>
+                                        <td class="change-cell down"><i class="fa-solid fa-caret-down"></i> 3.12%</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 22.4%</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 45.1%</td>
+                                        <td class="change-cell up"><i class="fa-solid fa-caret-up"></i> 620.5%</td>
+                                        <td class="price-cell">$65B</td>
+                                        <td>
+                                            <div class="sparkline-container">
+                                                <svg class="sparkline-svg up" viewBox="0 0 100 30">
+                                                    <path class="sparkline-path" d="M0,30 L20,25 L40,30 L60,10 L80,5 L100,15"/>
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- WEATHER SECTION -->
+                <section id="weather" class="page-section">
+                    <div class="weather-container">
+                        <div class="weather-info-overlay">
+                            <h2><i class="fa-solid fa-earth-asia"></i> World Live Weather</h2>
+                            <p>Real-time global weather conditions and forecast map.</p>
+                        </div>
+                        <iframe
+                            src="https://embed.windy.com/embed2.html?lat=-6.175&lon=106.827&detailLat=-6.175&detailLon=106.827&width=650&height=450&zoom=5&level=surface&overlay=wind&product=ecmwf&menu=&message=&marker=&calendar=now&pressure=&type=map&location=coordinates&detail=&metricWind=default&metricTemp=default&radarRange=1"
+                            frameborder="0">
+                        </iframe>
+                    </div>
+
+                    <h3 class="weather-grid-title">Global Weather Conditions</h3>
+                    <div class="weather-list">
+                        <!-- Indonesia -->
+                        <div class="city-weather-card">
+                            <div class="city-icon"><i class="fa-solid fa-sun" style="color: #fbbf24;"></i></div>
+                            <div class="city-info">
+                                <h4>Jakarta</h4>
+                                <p>Cerah Berawan</p>
+                            </div>
+                            <div class="city-temp">32°C</div>
+                        </div>
+                        <!-- USA -->
+                        <div class="city-weather-card">
+                            <div class="city-icon"><i class="fa-solid fa-cloud" style="color: #94a3b8;"></i></div>
+                            <div class="city-info">
+                                <h4>New York</h4>
+                                <p>Berawan</p>
+                            </div>
+                            <div class="city-temp">18°C</div>
+                        </div>
+                        <!-- UK -->
+                        <div class="city-weather-card">
+                            <div class="city-icon"><i class="fa-solid fa-cloud-showers-heavy"
+                                    style="color: #60a5fa;"></i></div>
+                            <div class="city-info">
+                                <h4>London</h4>
+                                <p>Hujan Ringan</p>
+                            </div>
+                            <div class="city-temp">14°C</div>
+                        </div>
+                        <!-- Japan -->
+                        <div class="city-weather-card">
+                            <div class="city-icon"><i class="fa-solid fa-cloud-sun" style="color: #f59e0b;"></i></div>
+                            <div class="city-info">
+                                <h4>Tokyo</h4>
+                                <p>Sebagian Berawan</p>
+                            </div>
+                            <div class="city-temp">22°C</div>
+                        </div>
+                        <!-- UAE -->
+                        <div class="city-weather-card">
+                            <div class="city-icon"><i class="fa-solid fa-temperature-high" style="color: #ef4444;"></i>
+                            </div>
+                            <div class="city-info">
+                                <h4>Dubai</h4>
+                                <p>Panas Terik</p>
+                            </div>
+                            <div class="city-temp">38°C</div>
+                        </div>
+                        <!-- France -->
+                        <div class="city-weather-card">
+                            <div class="city-icon"><i class="fa-solid fa-wind" style="color: #cbd5e1;"></i></div>
+                            <div class="city-info">
+                                <h4>Paris</h4>
+                                <p>Berangin</p>
+                            </div>
+                            <div class="city-temp">16°C</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
